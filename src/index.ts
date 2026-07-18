@@ -10,13 +10,14 @@
 //     .then(response => response.json())
 //     .then(data => console.log("Fetched data:", data.userId))
 
-// console.log("Data fetched successfully!");
 
 import axios from "axios"
 
 const main = async () => {
 
     const response = await axios.get("https://jsonplaceholder.typicode.com/todos/1")
+
+    console.log("Fetched data:", response.data.userId)
     
     console.log(response.data)
 }
